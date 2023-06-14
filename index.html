@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
+    <style>
+        *{margin: 0;padding: 0;}
+        header{
+            background-color: rgba(11, 34, 37, 0.926);   
+            text-align: center;
+            height: 7vh;
+        }
+        header ul {
+            list-style: none; 
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .drop  ul li a{
+            margin-left: -30px;
+            margin-right: 5px;
+        }
+        header ul li {
+            margin-left: 40px;
+        }
+        header ul li a{
+            display: block;
+            color: rgb(248, 246, 246);
+            text-decoration:underline transparent;  
+            font-size:20px;
+            line-height: 7vh;
+        }
+        header  ul li a:hover{
+            text-decoration: underline rgb(29, 219, 159);;
+            transition-property: text-decoration;
+            transition-duration: 0.1s;
+            transition-timing-function: linear;
+        }
+        footer{
+            background-color: rgba(24, 24, 24, 0.926);
+            height: 15vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        footer div{
+            color: rgb(74, 73, 73);
+        }
+        .content{
+            height: 80vh;
+        }
+        header ul li .drop {
+            display: none;
+        }
+        header ul li:hover .drop{
+            display: block;
+            position: absolute;
+            right:704px;
+            background-color: rgba(11, 34, 37, 0.926);
+            border-radius: 20px;
+            z-index: 20;
+
+        }
+        header ul li:hover .drop ul{
+            display: block;
+        }
+        .table{
+            width: 20vw;
+            height:50vh;
+            background-color: rgba(11, 34, 37, 0.681);
+            border-radius: 20px;
+            margin: 20px;
+            margin-left: 40px;
+            color: rgba(11, 34, 37, 0.797);
+            padding-top:10px ;
+
+
+        }
+        .table div ol li a{
+            position: relative;
+            text-decoration: underline transparent;
+            color: rgba(11, 34, 37, 0.797);
+            z-index: 30;
+        }
+        .table div a{
+            position: relative;
+            text-decoration: underline transparent;
+            color: rgba(11, 34, 37, 0.797);
+            z-index: 30;
+        }
+        .table div ol li a:hover{
+            color: white;
+            font-size: 17px;
+            transition: font-size 0.1s linear;
+
+        }
+        .table div a:hover{
+            color: white;
+            font-size: 17px;
+            transition: font-size 0.1s linear;
+
+        }
+        .content{
+            height: 80vh;
+        }
+        .table ol li{
+            position: relative;
+            left: 60px;
+        }
+         .line1{
+            width: 40vw;
+            border:2px outset rgba(183, 207, 210, 0.926); 
+            transform: rotate(90deg);
+            position: relative;
+            bottom: 120px;
+            left: 90px;
+         }
+        .content2{
+            display: flex;
+            flex-direction: column;
+           position: relative;
+           bottom: 56vh;
+           align-items: end;
+        }
+        .content2 div{
+            padding: 10px;
+        }
+        .line2{
+            width: 40vw;
+            border:2px outset rgba(183, 207, 210, 0.926); 
+            transform: rotate(90deg);
+            position: relative;
+            bottom: 770px;
+            left: 780px;
+         }
+         .thoery{
+              height: 80vh;
+              width: 44.6vw;
+
+              position: relative;
+              bottom: 137vh;
+              left: 26vw;
+         }
+         .thoery div{
+            margin-left: 20px;
+         }
+         .theory2 {
+            width: fit-content;
+            margin-top: 20px;
+         }
+         .theory2 div a{
+            text-decoration: none;
+            color: rgb(175, 15, 34);
+         }
+         .theory2 div a:hover{
+            text-decoration: none;
+            color: rgb(193, 186, 187);
+            font-size: 20px;
+         }
+         .illustration1{
+            height: 30vh;
+            width: 30vw;
+            background-color: rgb(150, 192, 192);
+            border: 4px solid maroon;
+            border-radius: 10px;
+            position: absolute;
+            bottom:320px;
+            left: 190px;
+            overflow-y: scroll;
+         }
+         .animation1{
+            width: fit-content;
+               animation: animation1 1s linear 1s;
+               animation-fill-mode: forwards;
+         }
+         .animation2{
+            width: fit-content;
+               animation: animation2 1s linear  2s;
+               color: transparent;
+               animation-fill-mode: forwards;
+         }
+         .animation3{
+            width: fit-content;
+               animation: animation3 1s linear  3s;
+               color: transparent;
+               animation-fill-mode: forwards;
+         }
+         .animation4 {
+            color: transparent;
+            position: relative;
+            bottom: 30px;
+            left :14px;
+            animation: animation4 1s linear 4s;
+            animation-fill-mode: forwards;
+
+         }
+         .animation5{
+            height: 30px;
+            width: 20px;
+            border-radius: 100px;
+            border: 2px solid transparent;
+            position: relative;
+            bottom: 140px;
+            left :46px;
+            animation: animation5 1s linear 5s;
+            animation-fill-mode: forwards;
+         }
+         .animation6{
+            height: 30px;
+            width: 20px;
+            border-radius: 100px;
+            border: 2px solid transparent;
+            position: relative;
+            bottom: 64px;
+            left :46px;
+            animation: animation5 1s linear 5s;
+            animation-fill-mode: forwards;
+         }
+         .animation{
+            position: relative;
+            width: fit-content;
+            left: 300px;
+            bottom: 30px;
+         }
+         .a2{
+            position: relative;
+            bottom: 90px;
+            right: 20px;
+         }
+         @keyframes animation1 {
+            0%{
+                position: relative;
+                left: 0px;
+                color: transparent;
+            }
+            100%{
+                position: relative;
+                left: 30px;
+                color: black;
+            }}
+            @keyframes animation2 {
+            0%{
+                position: relative;
+                left: 0px;
+                color: transparent;
+            }
+            100%{
+                position: relative;
+                left: 30px;
+                color: black;
+            }
+        
+         }
+         @keyframes animation3 {
+            0%{
+                position: relative;
+                left: 0px;
+                bottom: 54px;
+                color: transparent;
+            }
+            100%{
+                position: relative;
+                left: 30px;
+                bottom: 54px;
+                color: black;
+            }
+         }
+         @keyframes animation4 {
+            from{
+                color:transparent;
+            }
+            to{
+                color: black;
+            }
+         }
+         @keyframes animation5 {
+                0%{
+                border:0px solid transparent;
+            }
+            100%{
+                border:1.5px solid red;
+            }}
+            @keyframes animation6 {
+                0%{
+                border:0px solid transparent;
+            }
+            100%{
+                border:1.5px solid red;
+            }}
+    </style>
+</head>
+<body>
+    <header>
+            <ul>
+                <li><a href="https://swayanshu2323.github.io/js/">Home</a>
+                </li>
+                <li><a href="">About</a>
+                </li>
+                <li><a href="">Study</a>
+                    <div class="drop">
+                    <ul>
+                        <li><a href="https://swayanshu2323.github.io/1.0/">Chapter 1</a></li>
+                        <li><a href="https://swayanshu2323.github.io/2.0/">Chapter 2</a></li>
+                        <li><a href="https://swayanshu2323.github.io/3.0/">Chapter 3</a></li>
+                        <li><a href="https://swayanshu2323.github.io/4.0/">Chapter 4</a></li>
+                        <li><a href="https://swayanshu2323.github.io/5.0/">Chapter 5</a></li>
+                        <li><a href="https://swayanshu2323.github.io/6.0/">Chapter 6</a></li>
+                        <li><a href="https://swayanshu2323.github.io/7.0/">Chapter 7</a></li>
+                        <li><a href="https://swayanshu2323.github.io/8.0/">Chapter 8</a></li>
+                        <li><a href="https://swayanshu2323.github.io/9.0/">Chapter 9</a></li>
+                    </ul>
+                    </div>
+                </li>
+                <li><a href="">Contact us</a></li>
+                <li><a href="">More</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="table">
+                <div align="center"><u>CONTENT</u></div>
+                <div>
+                    <div align="center"><a href="https://swayanshu2323.github.io/2.1/">Expressions and conditionals</a></div>
+                    <ol>
+                        <li><a href="https://swayanshu2323.github.io/2.2/">Arithmetic operators</a></li>
+                        <li><a href="https://swayanshu2323.github.io/2.3/">Assignment operators</a></li>
+                        <li><a href="https://swayanshu2323.github.io/2.4/">Comparison operators</a></li>
+                        <li><a href="https://swayanshu2323.github.io/2.5/">logical operators</a></li>
+                        <li><a href="https://swayanshu2323.github.io/2.6/">Conditional statements</a>
+                            <ul type="disc" style="margin-left: 20px;">
+                                <li><a href="https://swayanshu2323.github.io/2.7/">If statement</a></li>
+                                <li><a href="https://swayanshu2323.github.io/2.8/">IF-else statement</a></li>
+                                <li><a href="https://swayanshu2323.github.io/2.9/">IF-else-if statement</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="https://swayanshu2323.github.io/2.10/">Javascript ternary operator</a></li>
+                        <li><a href="https://swayanshu2323.github.io/2.11/">Comments in javascript</a></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="line1"></div>
+        
+        <div class="content2">
+            <div class="image1">
+                <img src="https://cdn.dribbble.com/users/1019864/screenshots/3079099/codeloop.gif" height="300px">
+            </div>    
+            <div class="image 2">
+                <img src="https://media.giphy.com/media/BvAhstqNAansc/giphy.gif" height="300px" width="400px">
+            </div>    
+        </div>
+        <div class="line2"></div>
+        <div class="thoery">
+            <div style="font-size: 40px ">
+            <u>
+                Arithmetic operators
+            </u></div>
+            <div class="theory2" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                <div><a href="https://swayanshu2323.github.io/2.2.0/">Addition</a></div>
+                <div><a href="https://swayanshu2323.github.io/2.2.1/">Substarction</a></div>
+                <div><a href="https://swayanshu2323.github.io/2.2.2/">Multiplication</a></div>
+                <div><a href="https://swayanshu2323.github.io/2.2.3/">Exponentiation</a></div>
+                <div><a href="https://swayanshu2323.github.io/2.2.4/">Division</a></div>
+                <div><a href="https://swayanshu2323.github.io/2.2.5/">Modulus</a></div>
+                <div><a href="https://swayanshu2323.github.io/2.2.6/">Increament</a></div>
+                <div><a href="https://swayanshu2323.github.io/2.2.7/">Decreament</a></div>
+            </div>  
+            <div class="illustration1">
+                <div align="center"><u>Javascript Code</u></div>
+                <div>Let a=5</div>
+                <div>console.log(a--)</div>
+                <hr>
+                <div align="center"><u>Result</u></div>
+                <div>5</div>
+                <div class="animation">
+                <div class="animation1"style="font-size:30px">
+                    <div>5</div>
+                </div>
+                <div class="animation2"style="font-size:30px">
+                    <div>1</div>
+                </div>
+                <div class="animation3"style="font-size:30px">
+                    -
+                </div>
+                <div class="animation4" style="font-size:30px">
+                <div style="width: 40px; border: 2px solid black;"></div>
+                <div>&nbsp&nbsp4</div>
+                </div>
+                <div class="animation5"></div>
+                </div>
+                <div class="a2">
+                <div align="center"><u>Javascript Code</u></div>
+                <div>Let a=5</div>
+                <div>console.log(--a)</div>
+                <hr>
+                <div align="center"><u>Result</u></div>
+                <div>4</div>
+                <div class="animation">
+                <div class="animation1"style="font-size:30px">
+                    <div>5</div>
+                </div>
+                <div class="animation2"style="font-size:30px">
+                    <div>1</div>
+                </div>
+                <div class="animation3"style="font-size:30px">
+                    +
+                </div>
+                <div class="animation4" style="font-size:30px">
+                <div style="width: 40px; border: 2px solid black;"></div>
+                <div>&nbsp&nbsp4</div>
+                </div>
+                <div class="animation6"></div>
+                </div>
+            </div>  
+        </div>
+        </div>
+    </div>
+    <footer>
+        <div>
+            copyright&copy2003-2019swayanshusubham.com
+        </div>
+    </footer>
+</body>
+</html>
